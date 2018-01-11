@@ -10,8 +10,8 @@ Includecmd: no
   python3 /alpinoserver.py --host 0.0.0.0 --port 5002 --debug 
 
 
-%apprun client
-  python3 -m nlpipe.worker $@
-
 %apprun worker
-  python3 -m nlpipe.client $@
+  python3 -m nlpipe.worker "$@"
+
+%apprun client
+  python3 -m nlpipe.client "$@"
